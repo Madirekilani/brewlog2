@@ -1,0 +1,250 @@
+body {
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f9f9f9;
+  color: #333;
+}
+
+.app-container {
+  padding: 2em;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+h1 {
+  font-size: 2rem;
+  margin-bottom: 0.5em;
+}
+
+.brew-log-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.add-button {
+  background-color: #222;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.method-filter {
+  margin-bottom: 1rem;
+  width: 100%;
+ 
+  padding: 0.4em;
+  font-size: 1rem;
+  margin-bottom: 1em;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+.brew-log-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+.brew-item {
+  display: flex;
+  align-items: center;
+  background: white;
+  padding: 1em;
+  border-radius: 12px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  position: relative;
+  gap: 1em;
+}
+
+.rating-circle {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  color: white;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+}
+
+.brew-details {
+  flex: 1;
+}
+
+.brew-details strong {
+  display: block;
+  font-size: 1.1rem;
+  margin-bottom: 0.25em;
+}
+
+.tags {
+  display: flex;
+  gap: 0.5em;
+  flex-wrap: wrap;
+}
+
+.tags span {
+  background: #f1f1f1;
+  border-radius: 12px;
+  padding: 0.25em 0.75em;
+  font-size: 0.85rem;
+}
+
+.edit-icon {
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+  color: #555;
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+  padding: 1rem;
+  box-sizing: border-box;
+}
+
+.modal {
+  background: white;
+  padding: 2em;
+  border-radius: 16px;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+  max-width: 500px;
+  width: 90%;
+  position: relative;
+}
+
+.close-button {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #888;
+}
+
+.modal label {
+  display: block;
+  margin-top: 1em;
+  font-size: 0.9rem;
+}
+
+.modal input,
+.modal select,
+.modal textarea {
+  width: 100%;
+  padding: 0.5em;
+  margin-top: 0.25em;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+.row {
+  display: flex;
+  gap: 1em;
+}
+
+.row label {
+  flex: 1;
+}
+
+.modal-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1.5em;
+}
+
+.modal-buttons button {
+  padding: 0.5em 1.5em;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.modal-buttons .delete {
+  background: #e53935;
+  color: white;
+}
+
+.modal-buttons .save {
+  background: #222;
+  color: white;
+  margin-left: auto;
+}
+
+.star-rating {
+  display: flex;
+  gap: 0.25em;
+  margin-top: 0.5em;
+}
+
+.star-rating button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.star-rating svg {
+  width: 24px;
+  height: 24px;
+}
+
+@media (max-width: 600px) {
+  .brew-log-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1em;
+  }
+
+  .add-button {
+    width: 100%;
+    text-align: center;
+  }
+
+  .row {
+    flex-direction: column;
+  }
+
+  .brew-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .modal {
+    padding: 1.5em;
+  }
+
+  .modal-buttons {
+    flex-direction: column-reverse;
+    gap: 1em;
+  }
+
+  .modal-buttons .save,
+  .modal-buttons .delete {
+    width: 100%;
+  }
+}
