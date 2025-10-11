@@ -61,7 +61,7 @@ const createBrew = async (req, res) => {
     
     res.status(201).json(result.rows[0]);
   } catch (error) {
-    console.error('Error creating brew:', error);
+    console.error('Error creating brew:', error.message);
     res.status(500).json({ error: 'Failed to create brew' });
   }
 };
